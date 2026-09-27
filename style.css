@@ -6,7 +6,10 @@
   font-style: normal;
   font-display: swap;
 }
-
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
 :root {
   --ink: #111111;
   --muted: #999999;

@@ -1,3 +1,4 @@
+document.addEventListener("contextmenu", (e) => e.preventDefault());
 // Expand / collapse project descriptions (+ / − toggle)
 document.querySelectorAll(".toggle").forEach((btn) => {
   btn.addEventListener("click", () => {
