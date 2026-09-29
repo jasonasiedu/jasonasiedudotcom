@@ -244,12 +244,14 @@ p { margin: 0; }
    and let everything stack so the site stays usable on phones.
    ===================================================================== */
 @media (max-width: 820px) {
-  .sidebar { position: static; width: auto; padding: 24px; }
+  .sidebar { position: static; width: auto; height: auto; padding: 24px; }
   .screen { height: auto; width: auto; overflow: visible; position: static; }
   .box, .meta { position: static; width: auto !important; height: auto !important; margin-bottom: 12px; }
   .box { aspect-ratio: 4/3; }
   .meta-r1, .meta-r2, .lib-meta { margin: 12px 0; }
 
+  .feed { margin-left: 0; grid-template-columns: repeat(2, 1fr); }
+  
   .work-page { padding-left: 24px; }
   .project { height: auto; padding: 24px; }
   .carousel { width: 100%; height: auto; aspect-ratio: 16/9; }
