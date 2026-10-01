@@ -284,3 +284,36 @@ p { margin: 0; }
   object-fit: cover;
   display: block;
 }
+/* =====================================================================
+   FILM & VIDEO — dark mode
+   ===================================================================== */
+
+.film-page {
+  background: #000000;
+  color: var(--muted);
+}
+
+.film-page .sidebar {
+  background: #000000;
+}
+
+.film-page .brand {
+  color: #ffffff;
+}
+
+.film-page .nav a {
+  color: var(--muted);
+}
+
+.film-page .nav a.active,
+.film-page .nav a:hover {
+  color: #ffffff;
+}
+
+.film-page .meta {
+  color: #ffffff;
+}
+
+.film-page .meta .sub {
+  color: #ffffff;
+}
