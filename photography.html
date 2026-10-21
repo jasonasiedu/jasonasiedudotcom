@@ -30,11 +30,43 @@
     </nav>
   </aside>
   <main class="photo-page">
-    <!-- to fill a block, put <img src="images/yourfile.gif" alt=""> inside it -->
-    <div class="box"><img src="images/nyle98.gif" alt=""></div>
-    <div class="box"><img src="images/abby.gif" alt=""></div>
-    <div class="box"><img src="images/mildred.gif" alt=""></div>
+    <div class="photo-col">
+      <div class="photo-track">
+        <img src="images/IMG_0149.PNG" alt="">
+        <img src="images/Facetune_10-10-2026-14-37-34.jpg" alt="">
+        <img src="images/IMG_0085.JPG" alt="">
+        <img src="images/IMG_0039 2.JPG" alt="">
+        <img src="images/IMG_0023.jpg" alt="">
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-track">
+        <img src="images/IMG_0185.JPG" alt="">
+        <img src="images/IMG_0123.jpg" alt="">
+        <img src="images/IMG_0199 2.PNG" alt="">
+        <img src="images/IMG_0249.JPG" alt="">
+        <img src="images/IMG_0319.jpg" alt="">
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-track">
+        <img src="images/Facetune_19-04-2026-13-02-12.JPG" alt="">
+        <img src="images/IMG_0041.jpg" alt="">
+        <img src="images/IMG_0035.jpg" alt="">
+        <img src="images/mildred flow.jpg" alt="">
+        <img src="images/IMG_0051.jpg" alt="">
+      </div>
+    </div>
   </main>
 <script src="script.js"></script>
+<script>
+  document.querySelectorAll(".photo-track").forEach((track) => {
+    [...track.children].forEach((img) => {
+      const copy = img.cloneNode(true);
+      copy.setAttribute("aria-hidden", "true");
+      track.appendChild(copy);
+    });
+  });
+</script>
 </body>
 </html>

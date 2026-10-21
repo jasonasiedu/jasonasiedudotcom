@@ -318,7 +318,7 @@ p { margin: 0; }
   color: #ffffff;
 }
 /* =====================================================================
-   PHOTOGRAPHY — three full-height blocks
+   PHOTOGRAPHY — three auto-scrolling columns
    ===================================================================== */
 .photo-page {
   margin-left: 21.9vw;
@@ -329,15 +329,54 @@ p { margin: 0; }
   gap: 1.16vw;
 }
 
-.photo-page .box {
-  position: relative;
-  margin: 0;
+.photo-col {
+  --speed: 40s;        /* bigger number = slower scroll */
+  --space: 1.16vw;     /* space between stacked images */
+  overflow: hidden;
+  min-height: 0;
 }
 
-@media (max-width: 820px) {
-  .photo-page { margin-left: 0; height: auto; padding: 0 24px; gap: 8px; }
-  .photo-page .box { height: 60vh !important; aspect-ratio: auto; }
+.photo-track {
+  animation: photo-scroll var(--speed) linear infinite;
+}
 
-  /* see the note below about why this line lives here */
+.photo-track img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space);
+}
+
+/* hover anywhere in a column = that column freezes */
+.photo-col:hover .photo-track { animation-play-state: paused; }
+
+@keyframes photo-scroll   { to { transform: translateY(-50%); } }
+@keyframes photo-scroll-x { to { transform: translateX(-50%); } }
+
+@media (max-width: 820px) {
+  .photo-page {
+    margin-left: 0;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    padding: 0 24px;
+    gap: 8px;
+  }
+
+  /* each column becomes a horizontal strip, stacked on top of each other */
+  .photo-col { height: 35vh; --space: 8px; }
+  .photo-track {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation-name: photo-scroll-x;
+  }
+  .photo-track img {
+    flex: none;
+    width: auto;
+    height: 100%;
+    margin: 0 var(--space) 0 0;
+  }
+
   .feed { margin-left: 0; grid-template-columns: repeat(2, 1fr); }
 }
