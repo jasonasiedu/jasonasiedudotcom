@@ -252,16 +252,23 @@ p { margin: 0; }
 
   .feed { margin-left: 0; grid-template-columns: repeat(2, 1fr); }
   
-  .work-page { padding-left: 24px; }
+  .work-page { padding-left: 0; }
   .project { height: auto; padding: 24px; }
   .carousel { width: 100%; height: auto; aspect-ratio: 16/9; }
   .project-meta { position: static; width: auto; margin-top: 12px; }
 
-  .resume-page { padding: 24px; }
+  .resume-page { padding: 24px 16px; }
   .resume-contact { position: static; display: block; margin: 8px 0 24px; }
   .resume-section, .resume-entry { flex-direction: column; gap: 6px; }
   .resume-heading { transform: none; }
   .entry-date { text-align: left; }
+
+   /* resume: lift the desktop width caps */
+  .resume-heading, .entry-left, .entry-desc, .entry-date { flex: none; max-width: none; }
+  .skills-list { max-width: none; }
+
+  /* work page: let the caption use the full width when you tap + */
+  .description { max-width: none; }
 }
 /* =====================================================================
    this makes it so the images on the index are on grid formation
