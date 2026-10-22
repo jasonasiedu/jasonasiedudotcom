@@ -275,7 +275,7 @@ p { margin: 0; }
    ===================================================================== */
    .feed {
   margin-left: 21.9vw;
-  padding: 4vh 3vw 8vh 0vw;
+  padding: 4vh 3vw 8vh 3vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4vw;
