@@ -222,7 +222,7 @@ p { margin: 0; }
 .resume-heading {
   flex: 0 0 13vw;
   color: var(--ink);
-  transform: translateY(-1.4vh); /* the "higher" offset */
+  transform: translateY(-4vh); /* the "higher" offset */
 }
 
 .resume-entries { flex: 1; display: flex; flex-direction: column; gap: 2.6vh; }
