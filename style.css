@@ -47,7 +47,7 @@ p { margin: 0; }
   top: 0;
   left: 0;
   height: 100vh;
-  padding-left: 7.62vw;
+  padding-left: 3vw;
   padding-top: 1.73vh;
   width: 21.9vw;
   z-index: 10;
@@ -130,7 +130,7 @@ p { margin: 0; }
    ===================================================================== */
 .work-page { position: relative; padding-left: 21.9vw; }
 
-.project { position: relative; padding: 6vh 4vw 14vh 3vw; }
+.project { position: relative; padding: 6vh 4vw 14vh 0vw; }
 
 .carousel {
   position: relative;
@@ -275,7 +275,7 @@ p { margin: 0; }
    ===================================================================== */
    .feed {
   margin-left: 21.9vw;
-  padding: 4vh 3vw 8vh 3vw;
+  padding: 4vh 3vw 8vh 0vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4vw;
