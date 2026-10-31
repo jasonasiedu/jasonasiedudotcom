@@ -263,6 +263,7 @@ p { margin: 0; }
   .resume-heading { transform: none; }
   .entry-date { text-align: left; }
 
+  
    /* resume: lift the desktop width caps */
   .resume-heading, .entry-left, .entry-desc, .entry-date { flex: none; max-width: none; }
   .skills-list { max-width: none; }
